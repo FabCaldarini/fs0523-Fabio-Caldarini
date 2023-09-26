@@ -5,69 +5,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sviluppo di una pagina web - Blog Epicode</title>
+    <style>
+      body {
+        padding: 0;
+      }
+      iframe {
+        display: block;
+      }
+      td {
+        border: 1px solid;
+
+        width: 40%;
+      }
+    </style>
   </head>
-  <h1>Epicode - Il blog dei developers</h1>
-  <header>
-    <ul>
-      <a href="#" target="_blank"></a>
-      <li>Home</li>
-      <a href="#" target="_blank"></a>
-      <li>Articoli</li>
-      <a href="#" target="_blank"></a>
-      <li>Lavora con noi</li>
-    </ul>
-  </header>
-  <main>
-    <h2>
-      Come creare un template per i post di Mario Rossi - Pubblicato il
-      25-10-2020
-    </h2>
-    <div>
-      <p>
-        Per prima cosa da fare è suddividere in blocchi logici la pagina,
-        identificando le parti comuni da applicare a tutte le pagine.
-      </p>
-    </div>
-    <section>
-      <p>le varie aree saranno quindi suddivise in:</p>
+  <body>
+    <img src="assets/img/logo.svg" alt="Logo Epicode" />
+    <h1>Epicode - Il blog dei developers</h1>
+    <nav>
       <ul>
-        <li>Contenuti di intestazione del tag &lt;header&gt;</li>
-        <li>Contenuti centrali variabili del tag &lt;main&gt;</li>
-        <li>
-          Contenuti di fine pagina comuni,da inserire nel tag &lt;footer&gt;
-        </li>
+        <li><a href="#" target="_blank">Home</a></li>
+
+        <li><a href="#" target="_blank">Articoli</a></li>
+
+        <li><a href="#" target="_blank">Lavora con noi</a></li>
       </ul>
-    </section>
-    <section>
+    </nav>
+    <main>
+      <section>
+        <h2>
+          Come creare un template per i post di Mario Rossi - Pubblicato il
+          25-10-2020
+        </h2>
+        <div>
+          <p>
+            Per prima cosa da fare è suddividere in blocchi logici la pagina,
+            identificando le parti comuni da applicare a tutte le pagine.
+          </p>
+        </div>
+        <div>
+          <p>le varie aree saranno quindi suddivise in:</p>
+          <ul>
+            <li>Contenuti di intestazione del tag &lt;header&gt;</li>
+            <li>Contenuti centrali variabili del tag &lt;main&gt;</li>
+            <li>
+              Contenuti di fine pagina comuni,da inserire nel tag &lt;footer&gt;
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h3>Formattazione del codice</h3>
+
+        <div>
+          <p>
+            Il testo dell'articolo dovrà essere formattato per identificare
+            tutte le parti da selezionare con i CSS. Perciò i passi saranno:
+          </p>
+          <ol>
+            <li>
+              Progettare il markup assegnando ad ogni specifico tag appropriato
+            </li>
+            <li>
+              Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso
+              il basso
+            </li>
+            <li>Applicare gli stili CSS</li>
+          </ol>
+          <p>
+            L'applicazione di stili CSS è cresciuta negli anni fino a
+            raggiungere la diffusione pressoché totale.
+          </p>
+        </div>
+      </section>
       <div>
-        <p>Formattazione del codice</p>
+        <table>
+          <caption>
+            Diffusione dei CSS
+          </caption>
+          <tr>
+            <th>Anno</th>
+            <th>% di utilizzo</th>
+            <th>Supporto Browsers</th>
+          </tr>
+          <tr>
+            <td>2000</td>
+            <td>20%</td>
+            <td>17%</td>
+          </tr>
+          <tr>
+            <td>2002</td>
+            <td>35%</td>
+            <td>22%</td>
+          </tr>
+          <tr>
+            <td>2004</td>
+            <td>45%</td>
+            <td>42%</td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td>80%</td>
+            <td>51%</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>100%</td>
+            <td>76%</td>
+          </tr>
+        </table>
+        <div>
+          <p>
+            Un test di validazione potrà essere fatto tramite il tool online
+            <span><a href="#">-LINK ESTERNO-</a></span> dedicato allo scopo. Una
+            volta ottimizzato il tutto, avremo raggiunto il nostro obbiettivo ed
+            essere stati dei veri developers come loro :
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/fabelAs_m08?si=vlSjrduwzkMgZt24"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </p>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div>
+        <p>
+          Vuoi essere aggiornato su altre novità del blog? Iscriviti alla nostra
+          newsletter:
+        </p>
+      </div>
+      <div>
+        <form>
+          <div>
+            <label for="email">Inserisci l'email:</label>
+            <input type="text" id="email" required />
+          </div>
+          <div><input type="submit" value="Iscriviti!" /></div>
+        </form>
+      </div>
+      <div>
+        <h4>Articoli correlati</h4>
+
+        <ul>
+          <li><a href="#">Validare il codice HTML</a></li>
+          <li>Categoria: develop</li>
+          <li>Data: 16-9-2020</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Correggere la sintassi</a></li>
+          <li>Categoria: develop</li>
+          <li>Data: 16-9-2020</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Meno Kb nella pagina</a></li>
+          <li>Categoria: ottimizzazione</li>
+          <li>Data: 30-9-2020</li>
+        </ul>
+      </div>
+    </aside>
+
+    <footer>
+      <div>
+        <p>Blog Epicode &copy;2023</p>
       </div>
       <div>
         <p>
-          Il testo dell'articolo dovrà essere formattato per identificare tutte
-          le parti da selezionare con i CSS. Perciò i passi saranno:
+          Testata online di Mario Rossi, registrata con prot. n-213/2018 - via
+          Luigi Einaudi 2 - Milano. P.IVA 00112233.
         </p>
-        <ol>
-          <li>
-            Progettare il markup assegnando ad ogni specifico tag appropriato
-          </li>
-          <li>
-            Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso
-            il basso
-          </li>
-          <li>Applicare gli stili CSS</li>
-        </ol>
-        <p>
-          L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere
-          la diffusione pressoché totale.
-        </p>
+        <p><a href="mailto:info@epicode.school">info@epicode.school</a></p>
       </div>
-    </section>
-    <section>
-      <table>
-        <td></td>
-      </table>
-    </section>
-  </main>
-  <body></body>
+    </footer>
+  </body>
 </html>
