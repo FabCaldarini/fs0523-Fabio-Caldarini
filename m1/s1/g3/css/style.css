@@ -1,0 +1,124 @@
+html {
+  font-size: 62, 5%;
+}
+
+body {
+  margin: 0;
+}
+
+.header-content {
+  text-align: center;
+}
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+.main-content {
+  width: 800px;
+  display: block;
+  margin: auto;
+  padding: 0;
+
+  text-align: auto;
+}
+
+footer {
+  width: 800px;
+  display: block;
+  margin: auto;
+  padding: 0;
+  text-align: auto;
+}
+
+.logo {
+  height: 60px;
+  width: 200px;
+}
+
+.header-border {
+  margin-top: 10px;
+  padding: 5px;
+  border-top: 1px solid rgb(245, 222, 93);
+  background-color: rgb(249, 247, 231);
+  font-size: 0.8em;
+  color: rgb(13, 67, 13);
+}
+
+figure {
+  margin: 0;
+}
+
+.videostyling {
+  width: 100%;
+  height: 800px;
+}
+
+.focaccia {
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 20px;
+  color: grey;
+  font-size: 1.1em;
+  padding-bottom: 30px;
+}
+
+.featured {
+  border-left: 1px solid rgb(245, 222, 93);
+  padding-left: 20px;
+}
+
+.featured1stp {
+  color: darkred;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.featured2ndp {
+  margin: 0;
+  padding-bottom: 5px;
+  text-decoration: underline;
+  color: rgb(46, 134, 139);
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(173, 236, 236);
+}
+
+li {
+  padding-bottom: 20px;
+}
+
+li:nth-child(2) {
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(173, 236, 236);
+}
+
+.procedimento-title {
+  padding-left: 20px;
+  font-size: 1.1em;
+}
+
+.procedimento {
+  padding-left: 35px;
+}
+
+.footer-p {
+  color: rgb(46, 134, 139);
+  text-decoration: underline;
+}
