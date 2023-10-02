@@ -60,11 +60,11 @@ let x = 12
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*const FIRST_NAME = "Caldarini"
+const FIRST_NAME = "Caldarini"
 FIRST_NAME = "Rossi" 
 
  D1.js:64 Uncaught TypeError: Assignment to constant variable.
-    at D1.js:64:12 */
+    at D1.js:64:12 
 
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
