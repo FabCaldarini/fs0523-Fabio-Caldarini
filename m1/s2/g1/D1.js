@@ -89,5 +89,5 @@ const nome2 = "John"
 console.log(nome1==nome2) 
 
 {
-  console.log(nome1=="john")
+  console.log(nome1.toLowerCase()==nome2.toLowerCase())
 }
