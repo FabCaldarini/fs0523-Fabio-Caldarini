@@ -5,11 +5,12 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function area(l1,l2) {
-    console.log(l1,l2);
+    
+    return l1*l2;
     
 }
 
-area(10,20);
+console.log(area(4,5));
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
