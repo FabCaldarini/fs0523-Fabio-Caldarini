@@ -171,7 +171,13 @@
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
 
-      const revealFooterLink = function () {};
+      const revealFooterLink = function () {
+        footerBox = document.querySelector("footer");
+        footerBox.addEventListener("click", function () {
+          href = document.querySelector("footer a");
+          alert("You're trying to go to: " + href);
+        });
+      };
 
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
@@ -196,13 +202,24 @@
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
       */
 
-      const changeColorWithRandom = function () {};
+      const changeColorWithRandom = function () {
+        let h2 = document.getElementById("changeMyColor");
+        h2.addEventListener("click", function () {
+          h2.style.color = "#" + Math.floor(Math.random() * 1234567);
+        });
+      };
 
       /* EXTRA ESERCIZIO 16
         Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
       */
 
-      const deleteVowels = function () {};
+      const deleteVowels = function () {
+        everything = document.querySelectorAll("body *:not(script)");
+        console.log(everything);
+        everything.forEach((element) => {
+          element.textContent = element.textContent.replace(/[aeiou]/gi, "");
+        });
+      };
     </script>
   </body>
 </html>

@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#imput {
+  height: 30px;
+  margin-top: 30px;
+  border: 1.5px solid black;
+}
+
+.button-container {
+  text-align: center;
+  background-color: rgb(196, 182, 255);
+}
+
+.lista-to-do {
+  text-align: center;
+  border: black;
+  font-size: 1rem;
+  background-color: rgb(114, 255, 203);
+}
+
+.bottone {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  padding: 8px;
+
+  background-color: green;
+}
+
+.bottone:hover {
+  background-color: purple;
+}
+
+li {
+  text-decoration: none;
+}
