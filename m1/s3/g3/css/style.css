@@ -19,6 +19,7 @@ h1 {
   border: black;
   font-size: 1rem;
   background-color: rgb(114, 255, 203);
+  height: 100vh;
 }
 
 .bottone {
