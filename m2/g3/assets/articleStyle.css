@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 100px;
+  border: 1px solid #fbf7e3;
+  width: 350px;
+  height: 400px;
+  background-color: #fbf7e3;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.innerContainer {
+  border-radius: 100px;
+  flex-basis: 50%;
+  color: #fbf7e3;
+}
+
+#honey {
+  height: 255px;
+  width: 350px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.bottone {
+  background-color: #f3df85;
+  border-radius: 50px;
+  border: 1px;
+  height: 35px;
+  width: 150px;
+  margin-left: 90px;
+  margin-top: 20px;
+}
+
+h2 {
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.price {
+  text-align: end;
+  padding-right: 50px;
+}
+.italian {
+  padding-left: 15px;
+}

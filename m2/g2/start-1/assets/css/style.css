@@ -412,18 +412,24 @@ footer a {
 }
 
 .aside_links {
-  position: absolute;
+  position: fixed;
   right: 0;
+  bottom: 30px;
 }
 .aside_links div {
-  margin-bottom: 30px;
-  background-color: white, transparent;
-  border: 1px solid black;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.526);
+  border: 2px solid white;
   width: 70px;
   height: 70px;
   text-align: center;
-  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 30px;
+  padding: 10px;
 }
-.aside_links img {
-  width: 60px;
+.aside_links a {
+  color: rgb(21, 131, 168);
+}
+#ladro {
+  color: rgb(255, 82, 24);
 }
