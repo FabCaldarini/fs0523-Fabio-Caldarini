@@ -1,26 +1,119 @@
+/* 
+    colors:
+
+    background color general:   background-color: #FBF7E3;
+    background button:          background-color: #F3DF85;
+    background button:hover     background-color: #cbba6f;
+    text color:                 color: #612406;
+
+    Mobile: fino a 576
+    Tablet: 576 a 768
+    Medium: 768 a 1200
+    Medium-large: 1200 o 1280 a 1440
+    Extra-large: 1440 in su
+
+*/
+
+img {
+  max-width: 100%;
+}
+
 #logo {
   width: 50px;
+  padding-right: 20px;
 }
 
-header {
+#navbar {
+  background-color: #fbf7e3;
   display: flex;
-
-  border-radius: 30px;
-  border: 1px solid yellow;
-  background-color: yellow;
-
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 50px;
 }
 
-.navbar {
-  display: flex;
+.subNav {
+  justify-content: center;
   align-items: center;
+  list-style: none;
+  display: flex;
+}
+
+.subNav a {
+  background-color: #f3df85;
+  border-radius: 50px;
+  color: #612406;
+  padding: 10px;
+  width: 100%;
   text-align: center;
-  flex-basis: 50%;
+  text-decoration: none;
 }
-.navbar li {
-  padding: 30px;
-  display: inline-flex;
-  justify-content: space-between;
+
+.subNav1 {
+  flex-basis: 100%;
+  display: flex;
+}
+.subNav2,
+.subNav3,
+.subNav4,
+.subNav5 {
+  flex-basis: calc(100% / 2 - 7.5px);
+}
+
+.subNav1 a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (min-width: 576px) {
+  .subNav1,
+  .subNav2,
+  .subNav3,
+  .subNav4,
+  .subNav5 {
+    flex-basis: calc(100% / 5 - 15px);
+  }
+  .subNav1 {
+    order: 3;
+  }
+  .subNav2 {
+    order: 1;
+  }
+  .subNav3 {
+    order: 2;
+  }
+  .subNav4 {
+    order: 4;
+  }
+  .subNav5 {
+    order: 5;
+  }
+}
+
+.container {
+  display: flex;
+}
+.container2p {
+  display: flex;
+}
+.tu {
+  flex-basis: 60%;
+  border: 3px solid yellow;
+}
+.me {
+  flex-basis: 40%;
+  border: 3px solid red;
+}
+
+.realcontainer {
+  display: flex;
+}
+.container,
+.container2nd {
+  background-color: blueviolet;
+  flex-basis: calc(100% / 2);
 }
