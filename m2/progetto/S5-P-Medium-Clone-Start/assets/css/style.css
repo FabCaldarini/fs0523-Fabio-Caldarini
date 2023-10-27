@@ -14,25 +14,38 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* NAVBAR */
 
-#navbar {
+.navbar {
+  position: sticky;
+  top: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #ffc017;
-  height: 70px;
+  padding: 1% 0 1% 0;
   border-bottom: 1px solid black;
-  position: sticky;
+  transition: "background-color 0.5s ease";
+  z-index: 2;
 }
-#navbar img {
+
+.navbar img {
   height: 25px;
-  padding-left: 80px;
+  padding-left: 35%;
+}
+
+.SVG {
+  display: flex;
+  flex-basis: 30%;
 }
 
 .container {
   display: flex;
-  padding-right: 120px;
+  padding-right: 4%;
   font-size: 14px;
 }
 
@@ -65,18 +78,20 @@ a {
   display: flex;
   flex-wrap: wrap;
   background-color: #ffc017;
-  height: 400px;
+
   flex-basis: 10%;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid black;
 }
 
 .sectionContainer {
   flex-wrap: wrap;
   align-items: center;
+  align-content: center;
   display: flex;
-
-  flex-basis: 68%;
+  padding-left: 18%;
+  flex-basis: 50%;
+  gap: 40px;
 }
 .sectionContainer h1 {
   flex-basis: 100%;
@@ -104,7 +119,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-basis: 100%;
-  margin-left: 100px;
+  margin-left: 19.7%;
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -113,13 +128,14 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 7%;
+  padding: 0 18% 25px;
   border-bottom: 1px solid rgb(208, 208, 208);
 }
 
 .main_container {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 
 .subMcontainer .contenitore {
@@ -139,6 +155,13 @@ a {
 .contenitoreTesto {
   flex-basis: 85%;
 }
+.name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
 .contenitore h4 {
   padding: 20px 0 20px 0;
@@ -150,51 +173,59 @@ a {
   width: 20px;
 }
 .info {
-  display: inline-block;
+  font-weight: bold;
+}
+.data {
+  font-size: 13px;
+  color: grey;
 }
 
 /* INIZIO INFINITE / ASIDE */
 
 .contenitoreAll {
   display: flex;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .infinite_content {
-  flex-basis: 65%;
+  flex-basis: 50%;
+  padding-left: 18%;
 }
 
 aside {
   display: flex;
-  flex-basis: 35%;
-
+  flex-basis: 50%;
+  padding-right: 16%;
   height: 300px;
 }
 
 .h5_container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-weight: bold;
   flex-basis: 100%;
+  font-size: 15px;
 }
 .aside_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .aside_container .listContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .listContainer {
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
+  justify-content: flex-start;
+  gap: 5px;
 }
 
 .listContainer li {
@@ -206,7 +237,7 @@ aside {
   padding-right: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 14px;
 
   margin: 2px;
 
@@ -223,9 +254,48 @@ aside {
 
 .topic_link a {
   color: #1a8917;
+  font-size: 14px;
 }
 .topic_link {
   padding-bottom: 30px;
   border-bottom: 1px solid rgb(208, 208, 208);
-  width: 400px;
+  width: 80%;
+}
+
+.sublistContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+}
+.aside_container .sublistContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.sublistContainer li {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 5);
+  padding: 8px;
+}
+.sublistContainer a {
+  color: grey;
+  font-size: 14px;
+}
+
+.infinite_content {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.infinite_content span {
+  background-color: rgba(224, 224, 224, 0.437);
+  border-radius: 30px;
+  padding: 5px 10px 5px 10px;
 }
