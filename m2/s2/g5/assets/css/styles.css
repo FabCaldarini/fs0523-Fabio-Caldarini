@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #f3f3f3;
+  --home-bg-color: #fff;
+  --text-color: #000;
+  --account-bg-color: #929292;
+}
+
+body {
+  background: #000;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.trending {
+  font-size: 1.5rem;
+}
+.again {
+  font-size: 1.5rem;
+}
+.releases {
+  font-size: 1.5rem;
+}
+.shows {
+  font-size: 1.5rem;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+#avatar-small {
+  height: 24px;
+  margin-right: 10px;
+}
+
+#kids_icon {
+  height: 2.5rem;
+}
+
+#logo {
+  height: 3.2rem;
+}
+
+.dropdown-menu {
+  background-color: #000;
+  margin-left: -90px;
+}
+
+.icon {
+  margin: 4px 10px;
+}
+
+.dropdown-menu a {
+  font-size: 15px;
+}
+
+.genre-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-cover {
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.movie-cover:hover {
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scale(1.1);
+  position: relative;
+  z-index: 1;
+}
+
+.account-page {
+  background-color: white;
+  min-height: 120vh;
+}
+
+.account-page h6 {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.account-page .btn-membership {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(239, 238, 238),
+    rgb(191, 191, 191)
+  );
+  background-repeat: no-repeat;
+  border: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding-inline: 2rem;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 30%);
+}
+
+profile-title {
+  font-size: 64px;
+}
+
+.profile-page {
+  color: #fff;
+}
+
+profile-page .btn {
+  letter-spacing: 0.05rem;
+}
+
+profile-page .action-buttons button {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.edit-icon {
+  position: relative;
+  background: black;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  color: white;
+  background-color: grey;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 36px;
+  height: 36px;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+footer a.text-muted:hover {
+  color: white !important ;
+}
+.col-4 {
+  width: 40%;
+}
+.container-fluid-profile {
+  background-color: #141414;
+}
+.profile-nav {
+  color: #141414;
+}
+
+.edit {
+  font-size: 1.3rem;
+}
+.kids {
+  margin-top: 5px;
+}
