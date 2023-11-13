@@ -1,0 +1,36 @@
+.navbar {
+  background-color: rgba(78, 78, 78, 0.355);
+}
+.container {
+  justify-content: space-between;
+}
+.container_modify {
+  margin: 0px 100px 0px 100px;
+}
+.button_modify {
+  text-align: center;
+}
+.btn_modify {
+  width: 150px;
+}
+
+.product span {
+  display: flex;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+}
+.logo {
+  width: 50px;
+  border-radius: 50%;
+}
+.containerAll {
+  height: 100%;
+
+  background-image: url(../imgs/funko-background.webp);
+}
+html,
+body {
+  height: 100%;
+}
