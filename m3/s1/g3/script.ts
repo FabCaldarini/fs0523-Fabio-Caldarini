@@ -13,7 +13,7 @@ abstract class LavoratoreAutonomo {
 
     abstract getTasseIrpef(): number;
 
-    getRedditoAnnuoNetto(): number {
+    getRedditoAnnuoNetto( ): number {
         return this.redditoannuolordo - this.getUtileTasse();
     }
 }
@@ -61,3 +61,4 @@ console.log("\nLavoratore B:");
 console.log("Reddito Annuo Netto:", lavoratoreB.getRedditoAnnuoNetto());
 console.log("Tasse INPS:", lavoratoreB.getTasseInps());
 console.log("Tasse IRPEF:", lavoratoreB.getTasseIrpef());
+ 
