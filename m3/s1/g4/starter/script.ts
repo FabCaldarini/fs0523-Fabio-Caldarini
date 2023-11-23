@@ -1,4 +1,3 @@
-// Definizione della classe CapoAbbigliamento
 class CapoAbbigliamento {
     id: number;
     codprod: number;
@@ -47,7 +46,6 @@ class CapoAbbigliamento {
     }
   }
   
-  // Funzione per eseguire il fetch del JSON
   async function fetchJsonData(url: string): Promise<any[]> {
     try {
       const response = await fetch(url);
@@ -64,16 +62,12 @@ class CapoAbbigliamento {
     }
   }
   
-  // URL da cui fetchare il JSON (sostituiscilo con il tuo URL effettivo)
   const jsonUrl = 'https://example.com/path/to/your/json/data';
   
-  // Funzione principale asincrona
   async function main() {
     try {
-      // Eseguire il fetch del JSON e attendere i dati
       const datiJson = await fetchJsonData(jsonUrl);
   
-      // Creare istanze della classe CapoAbbigliamento utilizzando i dati JSON
       const capiAbbigliamentoDalJson = datiJson.map(
         capoJson => new CapoAbbigliamento(
           capoJson.id,
@@ -90,7 +84,6 @@ class CapoAbbigliamento {
         )
       );
   
-      // Utilizzare i dati come desiderato
       for (const capo of capiAbbigliamentoDalJson) {
         console.log('Dati del capo da JSON:', capo);
         console.log('Saldo del capo:', capo.getsaldocapo());
@@ -101,6 +94,5 @@ class CapoAbbigliamento {
     }
   }
   
-  // Eseguire la funzione principale
   main();
   
