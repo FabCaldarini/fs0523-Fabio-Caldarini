@@ -52,6 +52,6 @@ console.log(iphone.getNumeroChiamate());
 let pixel = new Smartphone(100);
 pixel.chiamata(400);
 pixel.chiamata(1); /* il numero di chiamate non aumenta perchè la chiamata da 400minuti utilizza tutto il credito residuo*/
-/* infatti impostandolo ad 1 spunta che il credito è insufficente */
+/* infatti impostandolo ad 1 spunta che il credito è insufficente viceversa togliendolo sparisce la scritta del credito insufficente*/
 console.log(pixel.numero404());
 console.log(pixel.getNumeroChiamate());
