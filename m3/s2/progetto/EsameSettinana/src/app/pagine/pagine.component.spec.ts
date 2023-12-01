@@ -11,7 +11,7 @@ describe('PagineComponent', () => {
       declarations: [PagineComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(PagineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

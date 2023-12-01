@@ -1,4 +1,4 @@
-// todos.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
@@ -17,7 +17,7 @@ export class TodoComponent implements OnInit {
   todoForm: FormGroup;
   private todosSubscription: Subscription | undefined;
 
-  // todos.component.ts
+
 constructor(private todosService: TodosService, private fb: FormBuilder) {
   this.todoForm = this.fb.group({
     title: ['', Validators.required],
@@ -35,13 +35,11 @@ constructor(private todosService: TodosService, private fb: FormBuilder) {
     });
   }
 
-  // todos.component.ts
-// todos.component.ts
-// todos.component.ts
+
 onSubmit(event: Event): void {
   event.preventDefault();
 
-  console.log('onSubmit called'); // Log to check if the method is called
+
 
   if (this.todoForm.valid) {
     const newTodo: Todo = {
@@ -50,7 +48,7 @@ onSubmit(event: Event): void {
       completed: false,
     };
 
-    console.log('New Todo:', newTodo); // Log the newTodo
+    console.log('New Todo:', newTodo);
 
     this.todosService.addTodo(newTodo).subscribe(
       (todos: Todo[]) => {
