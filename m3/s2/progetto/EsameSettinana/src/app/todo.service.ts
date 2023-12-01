@@ -1,66 +1,49 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-
-
-
+import { Todo } from './Models/todo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodosService {
-  private apiUrl = 'http://localhost:3000';
-  private todos: Todo[] = [];
 
-  constructor(private http: HttpClient) { }
+  baseUrl:string = 'http://localhost:3000/todos';
 
+  constructor() {}
 
-  getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(`${this.apiUrl}/todos`);
+  getAllTodos():Promise<Todo>{
+    return fetch(this.baseUrl).then(res => res.json())
   }
 
-
-  getCompletedTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(`${this.apiUrl}/todos?completed=true`);
+  getById(id:string):Promise<Todo>{
+    return fetch(this.baseUrl + `/${id}`).then(res => res.json())
   }
 
-
-  getTodosForPage(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(`${this.apiUrl}/todos?completed=false`);
+  createTodo(todo:Partial<Todo>):Promise<Todo>{
+    return fetch(this.baseUrl,{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(todo)
+    }).then(res => res.json())
   }
 
-
-  getCompletedTodosForPage(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(`${this.apiUrl}/todos?completed=true`);
+  updateTodo(todo:Partial<Todo>):Promise<Todo>{
+    return fetch(this.baseUrl + `/${todo.id}`,{
+      method:'PUT',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(todo)
+    }).then(res => res.json())
   }
 
-
-  addTodo(newTodo: Todo): Observable<Todo[]> {
-    return this.http.post<Todo[]>(`${this.apiUrl}/todos`, newTodo);
-  }
-
-
-  removeTodo(id: number): Observable<Todo[]> {
-    return this.http.delete<Todo[]>(`${this.apiUrl}/todos/${id}`);
-  }
-
-
-  toggleTodoCompletion(id: number): Observable<Todo[]> {
-    const todo = this.todos.find(todo => todo.id === id);
-    if (todo) {
-      todo.completed = !todo.completed;
-      return this.http.put<Todo[]>(`${this.apiUrl}/todos/${id}`, todo);
-    }
-    return this.getTodos();  // Return the updated todo list
+  deleteTodo(id:string):Promise<Todo>{
+    return fetch(this.baseUrl + `/${id}`,{
+      method:'DELETE',
+      headers:{
+        'Content-Type':'application/json'
+      }
+    }).then(res => res.json())
   }
 }
-
-
-export interface Todo {
-  id: number;
-  title: string;
-  completed: boolean;
-}
-
-

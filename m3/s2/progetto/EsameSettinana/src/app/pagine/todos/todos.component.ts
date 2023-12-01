@@ -1,81 +1,21 @@
-
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Subscription } from 'rxjs';
-import { Todo, TodosService } from '../../todo.service';
-
-
+import { Component } from '@angular/core';
+import { TodosService } from '../../todo.service';
+import { Todo } from '../../Models/todo';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.scss']
+  styleUrl: './todos.component.scss'
 })
-export class TodoComponent implements OnInit {
-  todos: Todo[] = [];
-  newTodos: Todo[] = [];
-  todoForm: FormGroup;
-  private todosSubscription: Subscription | undefined;
+export class TodoComponent {
 
+  constructor(private todosSvc:TodosService){}
 
-constructor(private todosService: TodosService, private fb: FormBuilder) {
-  this.todoForm = this.fb.group({
-    title: ['', Validators.required],
-  });
-}
+  newTodo:Partial<Todo> = {
+    completed: '0'
+  };
 
-
-  ngOnInit(): void {
-    this.fetchTodos();
-  }
-
-  fetchTodos(): void {
-    this.todosSubscription = this.todosService.getTodosForPage().subscribe((todos: Todo[]) => {
-      this.todos = todos;
-    });
-  }
-
-
-onSubmit(event: Event): void {
-  event.preventDefault();
-
-
-
-  if (this.todoForm.valid) {
-    const newTodo: Todo = {
-      id: Date.now(),
-      title: this.todoForm.value.title,
-      completed: false,
-    };
-
-    console.log('New Todo:', newTodo);
-
-    this.todosService.addTodo(newTodo).subscribe(
-      (todos: Todo[]) => {
-        this.todos = todos;
-        this.todoForm.reset();
-      },
-      (error) => {
-        console.error('Error adding todo:', error);
-      }
-    );
-  }
-}
-
-
-
-
-
-  moveToCompleted(todo: Todo): void {
-    this.todosService.toggleTodoCompletion(todo.id).subscribe(() => {
-      this.newTodos = this.newTodos.filter(t => t.id !== todo.id);
-      this.fetchTodos();
-    });
-  }
-
-  ngOnDestroy(): void {
-    if (this.todosSubscription) {
-      this.todosSubscription.unsubscribe();
-    }
+  saveTodo(){
+    this.todosSvc.createTodo(this.newTodo);
   }
 }

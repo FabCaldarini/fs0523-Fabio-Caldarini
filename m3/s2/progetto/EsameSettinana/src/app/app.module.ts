@@ -10,6 +10,7 @@ import { NavbarComponent } from './componenti/navbar/navbar.component';
 import { TodoComponent } from './pagine/todos/todos.component';
 import { CompletatiComponent } from './pagine/completati/completati.component';
 import { TodosService } from './todo.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TodosService } from './todo.service';
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [TodosService],
   bootstrap: [AppComponent],

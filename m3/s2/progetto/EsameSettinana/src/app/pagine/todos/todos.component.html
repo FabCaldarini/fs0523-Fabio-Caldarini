@@ -1,11 +1,13 @@
-<form [formGroup]="todoForm" (submit)="onSubmit($event)">
-  <label for="title">New Todo:</label>
-  <input type="text" id="title" formControlName="title" />
-  <button type="submit">Add Todo</button>
+<form>
+  <input
+    type="text"
+    placeholder="What do you need to do?"
+    [(ngModel)]="newTodo.title"
+    name="title"
+  />
+  <select name="active" [(ngModel)]="newTodo.completed">
+    <option value="1">Completed</option>
+    <option value="0">Not Completed</option>
+  </select>
+  <button (click)="saveTodo()">+</button>
 </form>
-
-<ul>
-  <li *ngFor="let todo of todos" (click)="moveToCompleted(todo)">
-    {{ todo.title }}
-  </li>
-</ul>
