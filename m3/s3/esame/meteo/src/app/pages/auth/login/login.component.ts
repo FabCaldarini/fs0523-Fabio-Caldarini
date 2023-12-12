@@ -23,7 +23,7 @@ export class LoginComponent {
   save(){
     this.authSvc.login(this.loginData)
     .subscribe(data => {
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['weather'])
     })
   }
 
