@@ -1,0 +1,11 @@
+<div class="weather-container">
+  <h2>Previsioni del Meteo per {{ city }}</h2>
+
+  <div class="forecast-card" *ngFor="let forecast of forecasts">
+    <div class="forecast-date">{{ forecast.dt_txt | date : "medium" }}</div>
+    <div class="forecast-temperature">{{ forecast.main.temp }}°C</div>
+    <div class="forecast-description">
+      {{ forecast.weather[0].description }}
+    </div>
+  </div>
+</div>

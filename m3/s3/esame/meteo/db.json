@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "email",
+      "password": "$2a$10$J7eKkQ6mlr4nKWdH4kfhTeIgeCAacxiw3xp0VGJeiFTA9jaUE1ZvW",
+      "nome": "Fabio",
+      "id": 1
+    },
+    {
+      "email": "fabio@msn.com",
+      "password": "$2a$10$Gt9x.VF4Kgb.6AB.3oY1HeadcjDM6Yy2iScN9lEN3AdD5sYfObr4a",
+      "nome": "fabio",
+      "id": 2
+    },
+    {
+      "email": "fabio@msnn.com",
+      "password": "$2a$10$HS.7eeqGcBMNMF61JEmwFOMfIy.nVJ.A65J/szj4qZEN1iOKYltj2",
+      "nome": "fabio",
+      "id": 3
+    }
+  ]
+}
