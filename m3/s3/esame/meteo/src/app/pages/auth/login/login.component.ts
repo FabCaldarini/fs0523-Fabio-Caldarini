@@ -24,7 +24,7 @@ export class LoginComponent {
     this.authSvc.login(this.loginData)
     .subscribe(data => {
         this.router.navigate(['weather'])
-    })
+    }).unsubscribe
   }
 
 }

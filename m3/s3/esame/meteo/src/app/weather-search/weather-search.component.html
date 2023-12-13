@@ -1,7 +1,5 @@
 <div>
-  <app-weather-search></app-weather-search>
-
-  <form (ngSubmit)="searchWeather()">
+  <form (submit)="searchWeather()">
     <label for="city">Inserisci la città:</label>
     <input type="text" id="city" [(ngModel)]="city" name="city" required />
     <button type="submit">Cerca</button>

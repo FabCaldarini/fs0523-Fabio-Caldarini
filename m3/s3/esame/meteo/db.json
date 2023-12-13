@@ -17,6 +17,12 @@
       "password": "$2a$10$HS.7eeqGcBMNMF61JEmwFOMfIy.nVJ.A65J/szj4qZEN1iOKYltj2",
       "nome": "fabio",
       "id": 3
+    },
+    {
+      "email": "giovanni@gmail.com",
+      "password": "$2a$10$RaMebDNjQx3PllVMrDYnYOYQ8SwRn21fru9uEoMZDd6pikI34u5iG",
+      "nome": "Giovanni",
+      "id": 4
     }
   ]
 }

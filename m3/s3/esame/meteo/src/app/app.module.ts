@@ -7,6 +7,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './pages/auth/auth.interceptor';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherSearchComponent } from './weather-search/weather-search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,10 @@ import { WeatherSearchComponent } from './weather-search/weather-search.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    DashboardModule
+
+    DashboardModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     {
